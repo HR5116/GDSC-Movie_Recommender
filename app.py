@@ -76,11 +76,6 @@ if st.button('✨ Get Recommendations'):
             else:
                 st.success('✅ Recommendations generated successfully!')
 
-                # Content-Based Recommendations
-                st.subheader('📚 Content-Based Recommendations:')
-                content_recommendations = get_similar_movies(movie_id)
-                st.table(content_recommendations)
-
                 # Hybrid Recommendations
                 st.subheader('🌟 Hybrid Recommendations:')
                 hybrid_recommendations = hybrid_recommend(user_input, movie_id, k=5)
